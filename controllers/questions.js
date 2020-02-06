@@ -20,4 +20,20 @@ router.get('/:id', (req, res) => {
   });
 });
 
+router.post('/', (req, res) => {
+  Question.create(req.body)
+  .then(ask => {
+    res.redirect('/questions');
+  })
+  .catch(console.error);
+});
+
+router.delete('/:id', (req, res) => {
+  Question.findByIdAndRemove({ _id: req.params.is}) 
+  .then(() => {
+    res.redirect('/questions');
+  })
+});
+
+
 module.exports = router;
