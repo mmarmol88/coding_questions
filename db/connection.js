@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/question', {
-    useNewUrlParser: true,
+mongoose.connect('mongodb://localhost/questions', {
+  useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
   useFindAndModify: false
