@@ -1,0 +1,13 @@
+<h1>{{title}}</h1>
+<p>{{question}}</p>
+<ul>
+    {{#each answer}}
+    <li>{{answer}}</li>
+</ul>
+{{/each}}
+
+<form action="/questions/{{_id}}?_method=post" method="post">
+    <input type="text" id="answer" name="answer">
+    <input type="submit" value="Answer">
+
+</form>

@@ -1,3 +1,7 @@
 <h1>Welcome to programming insight</h1>
 
 <p> Hey im working</p>
+<ul>
+    {{#each questions}}
+    <li>
+        <a href="questions/{{this._id}}">{{this.title}}: {{this.question}}</a> </li> {{/each}} </ul>

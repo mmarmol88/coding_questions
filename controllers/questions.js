@@ -14,4 +14,10 @@ router.get('/', (req, res) => {
     .catch(console.error);
 });
 
+router.get('/:id', (req, res) => {
+  Question.findById(req.params.id).then(details => {
+    res.render('show', details);
+  });
+});
+
 module.exports = router;

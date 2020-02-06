@@ -9,6 +9,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.set('view engine', 'hbs');
 
+const methodOverride = require('method-override');
+
+//ask about the methodOverride and how it works
+app.use(methodOverride('_method'));
 app.use('/questions', questionsController);
 
 app.listen(4000, () => {
