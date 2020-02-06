@@ -1,6 +1,6 @@
 const express = require('express');
 //require the question schema
-const Question = require('../db/schema');
+const Question = require('../db/Question');
 //require router
 const router = express.Router();
 
@@ -27,6 +27,15 @@ router.post('/', (req, res) => {
   })
   .catch(console.error);
 });
+
+router.post('/:id', (req, res) => {
+  Question.findOneAndUpdate(req.body)
+    .then(ask => {
+      res.redirect('/answers/{{_id}}');
+    })
+    .catch(console.error);
+});
+
 
 router.delete('/:id', (req, res) => {
   Question.findByIdAndRemove({ _id: req.params.is}) 

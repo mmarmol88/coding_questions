@@ -2,16 +2,16 @@
   {
     "title": "React",
     "question": "How do I set-state using react?",
-    "relationship": ["no response", "try harder"]
+    "relationshiped": []
   },
   {
     "title": "HTML",
     "question": "What does HTML stand for?",
-    "relationship": null
+    "relationshiped": []
   },
   {
     "title": "full-stack",
     "question": "What is required of a full-stack engineer?",
-    "relationship": "no response"
+    "relationshiped": []
   }
 ]
