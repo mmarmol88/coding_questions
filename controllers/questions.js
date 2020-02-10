@@ -22,27 +22,24 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   Question.create(req.body)
-  .then(ask => {
-    res.redirect('/questions');
-  })
-  .catch(console.error);
-});
-
-router.post('/:id', (req, res) => {
-  Question.findOneAndUpdate(req.body)
     .then(ask => {
-      res.redirect('/answers/{{_id}}');
+      res.redirect('/questions');
     })
     .catch(console.error);
 });
 
-
-router.delete('/:id', (req, res) => {
-  Question.findByIdAndRemove({ _id: req.params.is}) 
-  .then(() => {
-    res.redirect('/questions');
-  })
+router.put('/edit/:id', (req, res) => {
+  Question.findOneAndUpdate(req.body)
+    .then(ask => {
+      res.redirect('/edit/{{_id}}');
+    })
+    .catch(console.error);
 });
 
+router.delete('/:id', (req, res) => {
+  Question.findOneAndDelete({ _id: req.params.is }).then(() => {
+    res.redirect('/questions');
+  });
+});
 
 module.exports = router;

@@ -1,6 +1,6 @@
 const mongoose = require('./connection');
 const AnswerSchema = new mongoose.Schema({
-  answer: String,
+  answer: [String],
   relationship: [
     {
       ref: 'Question',
