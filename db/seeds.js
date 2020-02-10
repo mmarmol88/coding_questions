@@ -29,7 +29,7 @@ Question.deleteMany({}).then(() => {
           console.log('created question/answer relationship');
         })
         .catch(console.error);
-      mongoose.connection.close();
+      process.exit();
     });
 
     // Question.create({

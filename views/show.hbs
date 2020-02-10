@@ -1,12 +1,12 @@
 <h1>{{title}}</h1>
 <p>{{question}}</p>
 <ul>
-    {{#each answer}}
-    <li>{{answer}}</li>
+    {{#each answers}}
+    <li>{{answers}}</li>
 </ul>
 {{/each}}
 
-<form action="/answer/{{_id}}" method="post">
+<form action="/questions/{{_id}}/" method="post">
     <input type="text" id="answer" name="answer">
     <input type="submit" value="Answer">
 

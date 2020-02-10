@@ -1,6 +1,7 @@
 const express = require('express');
 //require the question schema
 const Question = require('../db/Question');
+const Answer = require('../db/Answer');
 //require router
 const router = express.Router();
 
@@ -13,7 +14,7 @@ router.get('/', (req, res) => {
     })
     .catch(console.error);
 });
-
+//show question details
 router.get('/:id', (req, res) => {
   Question.findById(req.params.id).then(details => {
     res.render('show', details);
@@ -24,14 +25,6 @@ router.post('/', (req, res) => {
   Question.create(req.body)
     .then(ask => {
       res.redirect('/questions');
-    })
-    .catch(console.error);
-});
-
-router.put('/edit/:id', (req, res) => {
-  Question.findOneAndUpdate(req.body)
-    .then(ask => {
-      res.redirect('/edit/{{_id}}');
     })
     .catch(console.error);
 });
