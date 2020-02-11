@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
 // router.post('/', (req, res) => {
 //   const newAnswer = req.body;
 //   Answer.create(newAnswer).then(answer => {
-//     res.redirect('/questions/:id');
+//     res.redirect('/questions/:id'); // the colon id is not a variable its just a string it will redirect to the localhost:4000/question/:id, we want the id of the answer we just created possibly ('/questions/answer.id')???
 //   });
 // });
 
