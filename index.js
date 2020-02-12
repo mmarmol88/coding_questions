@@ -1,6 +1,5 @@
 const express = require('express');
 const questionsController = require('./controllers/questions');
-const answersController = require('./controllers/answers');
 
 const app = express();
 
@@ -15,8 +14,7 @@ const methodOverride = require('method-override');
 //ask about the methodOverride and how it works
 app.use(methodOverride('_method'));
 app.use('/questions', questionsController);
-app.use('/answers', answersController);
 
 app.listen(4000, () => {
-  console.log('app is listening');
+  console.log('app is listening at port 4000');
 });

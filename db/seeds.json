@@ -2,17 +2,17 @@
   {
     "title": "React",
     "question": "How do I set-state using react?",
-    "relationshiped": ["using react hooks you can useState();"]
+    "answers": ["using react hooks you can useState();"]
   },
   {
     "title": "HTML",
     "question": "What does HTML stand for?",
-    "relationshiped": ["Hyperlink Text Markup Language"]
+    "answers": ["Hyperlink Text Markup Language"]
   },
   {
     "title": "full-stack",
     "question": "What is required of a full-stack engineer?",
-    "relationshiped": [
+    "answers": [
       "both front-end and back-end programing language knowledge",
       "To be totally awesome"
     ]

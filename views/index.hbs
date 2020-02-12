@@ -4,7 +4,7 @@
 <ul>
     {{#each questions}}
     <li>
-        <a href="questions/{{this._id}}">{{this.title}}: {{this.question}}</a> </li> {{/each}} </ul>
+        <a href="{{this._id}}">{{this.title}}: {{this.question}}</a> </li> {{/each}} </ul>
 
 <form action="/questions" method="post" accept-charset="utf-8">
     <label for="title">Title</label>

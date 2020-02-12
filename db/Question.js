@@ -3,12 +3,7 @@ const mongoose = require('./connection');
 const QuestionSchema = new mongoose.Schema({
   title: String,
   question: String,
-  relationshiped: [
-    {
-      ref: 'Answer',
-      type: mongoose.Schema.Types.ObjectId
-    }
-  ]
+  answers: [String]
 });
 
 const Question = mongoose.model('Question', QuestionSchema);

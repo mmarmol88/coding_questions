@@ -1,7 +1,6 @@
 const express = require('express');
 //require the question schema
 const Question = require('../db/Question');
-const Answer = require('../db/Answer');
 //require router
 const router = express.Router();
 
@@ -17,6 +16,7 @@ router.get('/', (req, res) => {
 //show question details
 router.get('/:id', (req, res) => {
   Question.findById(req.params.id).then(details => {
+    console.log(details);
     res.render('show', details);
   });
 });
@@ -30,7 +30,7 @@ router.post('/', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-  Question.findOneAndDelete({ _id: req.params.is }).then(() => {
+  Question.findOneAndDelete({ _id: req.params.id }).then(() => {
     res.redirect('/questions');
   });
 });
