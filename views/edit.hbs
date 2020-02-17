@@ -1,0 +1,6 @@
+<h2>Edit a Question</h2>
+<form action="/questions/{{this._id}}?_method=put" method="POST">
+    <label>Question</label>
+    <input type="text" name="question" value="{{this.question}}">
+    <input type="submit" value="update" />
+</form>

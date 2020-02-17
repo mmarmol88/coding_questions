@@ -1,10 +1,10 @@
 <h1>Welcome to programming insight</h1>
 
-<p> Hey im working</p>
 <ul>
     {{#each questions}}
     <li>
-        <a href="{{this._id}}">{{this.title}}: {{this.question}}</a> </li> {{/each}} </ul>
+        <a href="/questions/{{this._id}}">{{this.title}}: {{this.question}}</a></li><a
+        href="/questions/{{this._id}}/edit">Edit</a> {{/each}} </ul>
 
 <form action="/questions" method="post" accept-charset="utf-8">
     <label for="title">Title</label>

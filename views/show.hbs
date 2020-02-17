@@ -5,8 +5,6 @@
     <li>{{this}}</li>
     {{/each}}
 </ul>
-
-<form action="/questions/{{_id}}/" method="post">
-    <input type="text" id="answer" name="answer">
-    <input type="submit" value="Answer">
+<form action="/questions/{{_id}}?_method=delete" method="post">
+    <input type="submit" value="delete question" />
 </form>

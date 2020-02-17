@@ -20,6 +20,25 @@ router.get('/:id', (req, res) => {
     res.render('show', details);
   });
 });
+router.get('/:id/edit', (req, res) => {
+  Question.findById(req.params.id).then(ques => {
+    res.render('edit', ques);
+  });
+});
+router.put('/:id', (req, res) => {
+  const updatedQuestion = {
+    question: req.body.question
+  };
+  Question.findOneAndUpdate(
+    {
+      _id: req.params.id
+    },
+    updatedQuestion,
+    { new: true }
+  ).then(ques => {
+    res.redirect('/questions');
+  });
+});
 
 router.post('/', (req, res) => {
   Question.create(req.body)
